@@ -10,20 +10,21 @@
     <title>~VOLK LMS</title>
 </head>
 <body>
-    
-    <div class="container top-container">
-        <div class="row">
-            <div class="col-2">
-                LOGO
-            </div>
-            <div class="col-2">
-                SINO
-            </div>
-            <div class="col-2">
-                IMG PERFIL
-            </div>
+<div class="container-fluid top-container">
+    <div class="row">
+        <div class="col-2 border mr-auto"> <!-- Adicionando a classe mr-auto para a primeira coluna -->
+            <img src="../image/logo.png" width="100px">
+        </div>
+        <div class="col-2 border">
+            SINO
+        </div>
+        <div class="col-2 border">
+            IMG PERFIL
         </div>
     </div>
+</div>
+
+
 
     <!-- script -->
     <script src="../javascript/jquery-3.7.1.min.js"></script>  

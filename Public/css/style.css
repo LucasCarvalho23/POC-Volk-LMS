@@ -23,5 +23,9 @@ TOP CONTAINER (GRAY LINE)
 **************************************************************************************/
 
 .top-container {
-  background-color: gray;
+  background-color: #9c9c9c;
+}
+
+.align-left {
+  float: left;
 }
