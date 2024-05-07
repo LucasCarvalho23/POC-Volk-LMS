@@ -43,7 +43,14 @@
 
         //limitado para postar apenas 10
 
-    } 
+    } if ($action =="updateFinal") {
+
+        $conection = new Conection();
+        $register = new Register();
+        $updateProcess = new UpdateProcess($conection, $register);
+        $updateProcess->updateFinal();
+
+    }
     
 
 ?>

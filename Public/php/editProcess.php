@@ -31,7 +31,7 @@
             <button class="btn button-volklms">Integrar com VolkLMS</button>
         </div>
     
-        <form action="#" method="post">
+        <form action="autentication.php?action=updateFinal" method="post">
 
             <div class="row border-topbottom">
                 <div class="col-1">
@@ -69,17 +69,21 @@
                     <span>STATUS</span>
                 </div>
                 <div class="col-5">
-                    <select name="pessoas" class="form-control" required>
-                        <option value="">Selecione o status</option>
-                        <option value="1">PROCESSADO</option>
-                        <option value="2" selected>CANCELADO</option>
+                    <select name="status" class="form-control" required>
+                        <?php if ($_SESSION['status'] == "PROCESSADO") {?>
+                            <option value="PROCESSADO" selected>PROCESSADO</option>
+                            <option value="CANCELADO">CANCELADO</option>
+                        <?php } else if ($_SESSION['status'] == "CANCELADO") {?>
+                            <option value="PROCESSADO">PROCESSADO</option>
+                            <option value="CANCELADO" selected>CANCELADO</option>
+                        <?php } ?>
                     </select>
                 </div>
             </div>
 
             <div class="container-button-register border-topbottom">
-                <button class="btn button-create">Gravar</button>
-                <button class="btn button-clear">Novo</button>
+                <button class="btn button-create" type="submit">Gravar</button>
+                <a href="index.php" class="btn button-clear">Voltar</a>
             </div>
 
         </form>

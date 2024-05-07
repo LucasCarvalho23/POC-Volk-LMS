@@ -84,7 +84,7 @@
 
             <div class="container-button-register border-topbottom">
                 <button class="btn button-create" type="submit">Gravar</button>
-                <button class="btn button-clear" type="button" id="button-clear">Novo</button>
+                <button class="btn button-clear" type="button" id="button-clear">Limpar</button>
             </div>
 
         </form>

@@ -43,7 +43,13 @@
         <div>
             <span class="span-filter-error text-danger"><?php echo $_SESSION['error']; ?></span>
         </div>
-        <?php unset($_SESSION['error']); } ?>
+        <?php unset($_SESSION['error']); 
+        } 
+        if (isset($_SESSION['updateProcess'])) {?>
+        <div>
+            <span class="span-filter-updateProcess text-success"><?php echo $_SESSION['updateProcess']; ?></span>
+        </div>
+        <?php unset($_SESSION['updateProcess']); } ?>
 
 
         <a href="novoProcesso.php" class="btn button-new-process">Novo Processo</a>

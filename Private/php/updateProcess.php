@@ -88,6 +88,31 @@
 
         }
 
+        public function updateFinal() {
+
+            try{
+                
+            $codigo = $_SESSION['codigo'];
+            $status = $_POST['status'];
+            $dataModificacao = date('Y-m-d H:i:s');
+    
+            $query = 'update tb_processos set status = :status, datamodificacao = :datamodificacao where codigo = :codigo';
+            $stmt = $this->conection->prepare($query);
+            $stmt->bindValue(':status', $status);
+            $stmt->bindValue(':datamodificacao', $dataModificacao);
+            $stmt->bindValue(':codigo', $codigo);
+            $stmt->execute();
+            $_SESSION['updateProcess'] = 'Dados atualizados com sucesso';
+            header('Location: ./index.php');
+
+
+            } catch(Exception $e) {
+                $_SESSION['error'] = 'Os dados não foram inseridos. Favor tentar novamente';
+                header('Location: ./index.php');
+            }
+
+        }
+
     }
 
 ?>

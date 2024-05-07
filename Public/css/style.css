@@ -156,7 +156,7 @@ FILTER CONTAINER
   margin-right: 100px;
 }
 
-.span-filter-error {
+.span-filter-error, .span-filter-updateProcess {
   font-size: .8em;
 }
 
