@@ -7,10 +7,12 @@
         private $conection;
         private $register;
 
+
         public function __construct(Conection $conection, Register $register) {
             $this->conection = $conection->conection();
             $this->register = $register;
         }
+
 
         public function create() {
             
@@ -40,6 +42,26 @@
                 header('Location: ./novoProcesso.php');
             }
 
+
+        }
+
+
+        public function update() {
+
+            try{
+
+                $filter = $_POST['filter'];
+                $query = 'select * from tb_processos where nome = :filter or unidade = :filter or status = :filter or pessoa = :filter LIMIT 10';
+                $stmt = $this->conection->prepare($query);
+                $stmt->bindValue(':filter', $filter);
+                $stmt->execute();
+                return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+            } catch (Exception $e) {
+                $_SESSION['error'] = 'Os dados não foram inseridos. Favor tentar novamente';
+                header('Location: ./index.php');
+            }
 
         }
 

@@ -152,6 +152,9 @@ FILTER CONTAINER
   margin-right: 100px;
 }
 
+.span-filter-error {
+  font-size: .8em;
+}
 
 /**************************************************************************************
 
@@ -179,6 +182,13 @@ TABLE
   color: black;
   font-size: .9em;
   border: none;
+}
+
+.button-lamp {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 

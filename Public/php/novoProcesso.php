@@ -24,7 +24,7 @@
     </div>
 
     <div class="container-new-register">
-        <form action="./autentication.php" method="post">
+        <form action="./autentication.php?action=updateProcess" method="post">
 
             <div class="row border-topbottom">
                 <div class="col-1">
