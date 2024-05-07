@@ -10,20 +10,25 @@
     <title>~VOLK LMS</title>
 </head>
 <body>
-<div class="container-fluid top-container">
-    <div class="row">
-        <div class="col-2 border mr-auto"> <!-- Adicionando a classe mr-auto para a primeira coluna -->
-            <img src="../image/logo.png" width="100px">
-        </div>
-        <div class="col-2 border">
-            SINO
-        </div>
-        <div class="col-2 border">
-            IMG PERFIL
+
+    <?php include 'navbar.php'; ?>
+
+    <div class="file-path">
+        <span class="span-first-path">Administração / </span>
+        <span class="span-last-path">Fila de Processos</span>
+    </div>
+
+    <div class="container-filter">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Filtro:</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Filtro" aria-describedby="basic-addon3">
+            <div class="input-group-append ms-2">
+                <button class="btn btn-success" type="button">Ok</button>
+            </div>
         </div>
     </div>
-</div>
-
 
 
     <!-- script -->
