@@ -25,7 +25,7 @@
 
     <div class="file-path">
         <span class="span-first-path">Administração / </span>
-        <span class="span-last-path">Fila de Processos</span>
+        <a href="index.php"><span class="span-last-path">Fila de Processos</span></a>
     </div>
 
     <div class="container-filter">
@@ -65,6 +65,7 @@
                 </tr>
             </thead>
             <tbody>
+
                 <?php
                     if (!empty($results)) {
                         foreach ($results as $row) {
@@ -77,7 +78,7 @@
                             echo "<td>" . $row['datacriacao'] . "</td>";
                             echo "<td>" . $row['datamodificacao'] . "</td>";
                             echo "<td>
-                                <a href='editProcess.php'><svg xmlns='http://www.w3.org/2000/svg' width='13' height='13' fill='currentColor' class='bi bi-search me-3' viewBox='0 0 16 16'>
+                                <a href='autentication.php?action=editProcess&codigo=".$row['codigo']."'><svg xmlns='http://www.w3.org/2000/svg' width='13' height='13' fill='currentColor' class='bi bi-search me-3' viewBox='0 0 16 16'>
                                     <path d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0'/>
                                 </svg></a>
                                 <svg xmlns='http://www.w3.org/2000/svg' width='13' height='13' fill='currentColor' class='bi bi-x-circle-fill' viewBox='0 0 16 16'>

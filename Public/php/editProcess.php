@@ -1,3 +1,9 @@
+<?php 
+
+    session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,7 +39,7 @@
                     <span>NOME</span>
                 </div>
                 <div class="col-5">
-                    <input type="text" class="form-control" disabled>
+                    <input type="text" class="form-control" placeholder="<?php echo $_SESSION['nome']; ?>" disabled>
                 </div>
             </div>
 
@@ -43,13 +49,7 @@
                     <span>PESSOAS</span>
                 </div>
                 <div class="col-5">
-                    <select name="pessoas" class="form-control" disabled>
-                        <option value="">Selecione uma pessoa</option>
-                        <option value="1">Victor</option>
-                        <option value="2">Gabriel</option>
-                        <option value="3">Robson</option>
-                        <option value="4">Anderson</option>
-                    </select>
+                    <input type="text" class="form-control" placeholder="<?php echo $_SESSION['pessoa']; ?>" disabled>
                 </div>
             </div>
 
@@ -59,13 +59,7 @@
                     <span>UNIDADES</span>
                 </div>
                 <div class="col-5">
-                    <select name="pessoas" class="form-control" disabled>
-                        <option value="">Selecione uma unidade</option>
-                        <option value="1">Unidade Blumenal</option>
-                        <option value="2">Unidade Rio de Janeiro</option>
-                        <option value="3">Unidade Navegantes</option>
-                        <option value="4">Unidade Itajaí</option>
-                    </select>
+                    <input type="text" class="form-control" placeholder="<?php echo $_SESSION['unidade']; ?>" disabled>
                 </div>
             </div>
 
@@ -75,7 +69,7 @@
                     <span>STATUS</span>
                 </div>
                 <div class="col-5">
-                    <select name="pessoas" class="form-control">
+                    <select name="pessoas" class="form-control" required>
                         <option value="">Selecione o status</option>
                         <option value="1">PROCESSADO</option>
                         <option value="2" selected>CANCELADO</option>
@@ -90,10 +84,6 @@
 
         </form>
     </div>
-
-
-
-
 
 
     <!-- script -->

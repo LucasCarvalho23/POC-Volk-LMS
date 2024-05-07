@@ -22,10 +22,15 @@
         $updateProcess->create();
 
     } else if ($action =="editProcess") {
+        $codigo = isset($_GET['codigo']) ? $_GET['codigo'] : $codigo;
+        $_SESSION['codigo'] = $codigo;
 
-        echo ("<pre>");
-        print_r($_POST);
-        echo ("</pre>");
+        $conection = new Conection();
+        $register = new Register();
+
+        $updateProcess = new UpdateProcess($conection, $register);
+        $results = $updateProcess->update();
+        header("Location: ./editProcess.php");
 
     } else if ($action =="filter") {
 
@@ -33,13 +38,12 @@
         $register = new Register();
 
         $updateProcess = new UpdateProcess($conection, $register);
-        $results = $updateProcess->update();
+        $results = $updateProcess->read();
         header("Location: ./index.php?results=" . urlencode(serialize($results)));
 
         //limitado para postar apenas 10
 
-    }
-
+    } 
     
 
 ?>

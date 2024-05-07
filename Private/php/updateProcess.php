@@ -46,7 +46,7 @@
         }
 
 
-        public function update() {
+        public function read() {
 
             try{
 
@@ -59,6 +59,29 @@
 
 
             } catch (Exception $e) {
+                $_SESSION['error'] = 'Os dados não foram inseridos. Favor tentar novamente';
+                header('Location: ./index.php');
+            }
+
+        }
+
+        public function update() {
+
+            try{
+                
+                $codigo = $_SESSION['codigo'];
+                $query = 'select * from tb_processos where codigo = :codigo';
+                $stmt = $this->conection->prepare($query);
+                $stmt->bindValue(':codigo', $codigo);
+                $stmt->execute();
+                $return = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $_SESSION['codigo'] = $return[0]['codigo'];
+                $_SESSION['nome'] = $return[0]['nome'];
+                $_SESSION['pessoa'] = $return[0]['pessoa'];
+                $_SESSION['unidade'] = $return[0]['unidade'];
+                $_SESSION['status'] = $return[0]['status'];
+
+            } catch(Exception $e) {
                 $_SESSION['error'] = 'Os dados não foram inseridos. Favor tentar novamente';
                 header('Location: ./index.php');
             }
