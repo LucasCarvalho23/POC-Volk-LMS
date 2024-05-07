@@ -1,14 +1,18 @@
 /**************************************************************************************
-GERAL
+DEFAULT
 
-NAVBAR:
+NAVBAR
 - TOP CONTAINER (GRAY LINE)
 - NAV CONTAINER (ORANGE LINE)
 
-INDEX:
+INDEX
 - FILE PATH CONTAINER
 - FILTER CONTAINER
 - TABLE
+
+REGISTER
+
+EDIT
 
 **************************************************************************************/
 
@@ -25,6 +29,22 @@ INDEX:
   float: left;
 }
 
+.red-color {
+  color: red;
+}
+
+.border-bottom {
+  border: 1px solid #d4d4d1;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+
+.border-topbottom {
+  border: 1px solid #d4d4d1;
+  border-left: none;
+  border-right: none;
+}
 
 
 /**************************************************************************************
@@ -93,6 +113,13 @@ FILE PATH CONTAINER
   color: #949698;
 }
 
+.a-first-path {
+  text-decoration: none;
+  color: #d4d4d1;
+  font-weight: bold;
+  font-size: .9em;
+}
+
 
 /**************************************************************************************
 
@@ -138,6 +165,10 @@ TABLE
   text-align: center;
 }
 
+.container-table a {
+  color: black;
+}
+
 .container-pagination {
   position: absolute;
   right: 0;
@@ -148,4 +179,72 @@ TABLE
   color: black;
   font-size: .9em;
   border: none;
+}
+
+
+/**************************************************************************************
+
+REGISTER
+
+**************************************************************************************/
+
+.container-new-register  {
+  margin: 0 100px 0 120px;
+}
+
+.container-new-register div {
+  padding: 10px;
+  font-size: .9em;
+  color: #949698;
+  font-weight: bold;
+}
+
+.container-new-register span {
+  vertical-align: middle;
+}
+
+.container-button-register {
+  background-color: #f4f4f4;
+  margin-top: 20px;
+}
+
+.button-create {
+  background-color: #6db721;
+  color: white;
+}
+
+.button-create:hover {
+  background-color: #5f9e1f;
+  color: white;
+}
+
+.button-clear {
+  background-color: #3e73d6;
+  color: white;
+  margin-left: 10px;  
+}
+
+.button-clear:hover {
+  background-color: #3662b4;
+  color: white;
+}
+
+
+/**************************************************************************************
+
+EDIT
+
+**************************************************************************************/
+
+.button-volklms {
+  background-color: #6db721;
+  color: white;
+  margin: 0px 100px 0 0;
+  position: absolute;
+  right: 0;
+}
+
+.button-volklms:hover {
+  background-color: #5f9e1f;
+  color: white;
 }
