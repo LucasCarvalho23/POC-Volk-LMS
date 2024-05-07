@@ -14,9 +14,8 @@
 
         public function create() {
             
-          //  try {
+          try {
             if ($this->register->__get('dataCriacao') === null) {
-                // Defina a data de criação apenas se não estiver definida
                 $this->register->__set('dataCriacao', (new DateTime())->format('Y-m-d H:i:s'));
             }
 
@@ -36,10 +35,10 @@
                 $stmt->execute();
                 $_SESSION['return'] = 'Dados inseridos com sucesso';
                 header('Location: ./novoProcesso.php');
-           // } catch (Exception $e) {
-           //     $_SESSION['error'] = 'Os dados não foram inseridos. Favor tentar novamente';
-            //    header('Location: ./novoProcesso.php');
-          //  }
+           } catch (Exception $e) {
+                $_SESSION['error'] = 'Os dados não foram inseridos. Favor tentar novamente';
+                header('Location: ./novoProcesso.php');
+            }
 
 
         }
