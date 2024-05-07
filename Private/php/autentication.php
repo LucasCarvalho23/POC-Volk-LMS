@@ -1,26 +1,19 @@
 <?php 
 
+    require '../../Private/php/conection.php';
     require '../../Private/php/register.php';
+    require '../../Private/php/updateProcess.php';
 
-    class UpdateInfo {
-        
-        private $register;
+    $conection = new Conection();
+    $register = new Register();
 
-        public function __construct(Register $register) {
-            $this->register = $register;
-
-            echo ("<pre>");
-            print_r ($this->register);
-            echo ("</pre>");
-            echo ("<hr>");
+    foreach ($_POST as $key => $value) {
+        if (property_exists($register, $key)) {
+            $register->$key = $value;
         }
-
     }
 
-    echo ("<pre>");
-    print_r ($_POST);
-    echo ("</pre>");
-    echo ("<hr>");
-
+    $updateProcess = new UpdateProcess($conection, $register);
+    $updateProcess->create();
 
 ?>

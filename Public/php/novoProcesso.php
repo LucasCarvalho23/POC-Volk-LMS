@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,12 +42,12 @@
                     <span>PESSOAS</span>
                 </div>
                 <div class="col-5">
-                    <select name="pessoas" class="form-control" required>
+                    <select name="pessoa" class="form-control" required>
                         <option value="">Selecione uma pessoa</option>
-                        <option value="1">Victor</option>
-                        <option value="2">Gabriel</option>
-                        <option value="3">Robson</option>
-                        <option value="4">Anderson</option>
+                        <option value="Victor">Victor</option>
+                        <option value="Gabriel">Gabriel</option>
+                        <option value="Robson">Robson</option>
+                        <option value="Anderson">Anderson</option>
                     </select>
                 </div>
             </div>
@@ -54,12 +58,12 @@
                     <span>UNIDADES</span>
                 </div>
                 <div class="col-5">
-                    <select name="unidades" class="form-control" required>
+                    <select name="unidade" class="form-control" required>
                         <option value="">Selecione uma unidade</option>
-                        <option value="1">Unidade Blumenal</option>
-                        <option value="2">Unidade Rio de Janeiro</option>
-                        <option value="3">Unidade Navegantes</option>
-                        <option value="4">Unidade Itajaí</option>
+                        <option value="Blumenal">Unidade Blumenal</option>
+                        <option value="Rio de Janeiro">Unidade Rio de Janeiro</option>
+                        <option value="Navegantes">Unidade Navegantes</option>
+                        <option value="Itajaí">Unidade Itajaí</option>
                     </select>
                 </div>
             </div>
@@ -72,8 +76,8 @@
                 <div class="col-5">
                     <select name="status" class="form-control" required>
                         <option value="">Selecione o status</option>
-                        <option value="1">PROCESSADO</option>
-                        <option value="2">CANCELADO</option>
+                        <option value="PROCESSADO">PROCESSADO</option>
+                        <option value="CANCELADO">CANCELADO</option>
                     </select>
                 </div>
             </div>
@@ -84,6 +88,19 @@
             </div>
 
         </form>
+
+        <?php if (isset($_SESSION['return'])) { ?>
+        <div>
+            <span class="span-create-success text-success"><?php echo $_SESSION['return']; ?></span>
+        </div>
+        <?php unset($_SESSION['return']); } ?>
+
+        <?php if (isset($_SESSION['error'])) { ?>
+        <div>
+            <span class="span-create-success text-danger"><?php echo $_SESSION['error']; ?></span>
+        </div>
+        <?php unset($_SESSION['error']); } ?>
+
     </div>
 
 

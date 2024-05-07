@@ -185,7 +185,7 @@
                 </tr>
                 <tr>
                     <td>98</th>
-                    <td>importação de matrículas</td>
+                    <td>Importação de matrículas</td>
                     <td>Robson</td>
                     <td>Unidade de Navegantes</td>
                     <td>CANCELADO</td>
@@ -204,7 +204,7 @@
                     <td>97</th>
                     <td>Certificados em lote</td>
                     <td>Anderson</td>
-                    <td>Unidade de itajaí</td>
+                    <td>Unidade de Itajaí</td>
                     <td>PROCESSADO</td>
                     <td>23-01-23 22:03:26</td>
                     <td>23-01-23 22:03:26</td>
