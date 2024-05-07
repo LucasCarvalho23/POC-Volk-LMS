@@ -8,6 +8,7 @@ NAVBAR:
 INDEX:
 - FILE PATH CONTAINER
 - FILTER CONTAINER
+- TABLE
 
 **************************************************************************************/
 
@@ -100,5 +101,51 @@ FILTER CONTAINER
 **************************************************************************************/
 
 .container-filter {
-  margin: 50px 240px 0 120px;
+  margin: 30px 100px 0 120px;
+}
+
+.button-filter, .button-new-process {
+  background-color: #6db721;
+  color: white;
+  font-weight: bold;
+}
+
+.button-filter:hover, .button-new-process:hover {
+  background-color: #5f9e1f;
+  color: white;
+}
+
+.button-filter {
+  width: 100px;
+}
+
+.button-new-process {
+  position: absolute;
+  right: 0;
+  margin-right: 100px;
+}
+
+
+/**************************************************************************************
+
+TABLE
+
+**************************************************************************************/
+
+.container-table {
+  margin: 70px 100px 0 120px;
+  font-size: .8em;
+  text-align: center;
+}
+
+.container-pagination {
+  position: absolute;
+  right: 0;
+  margin: 30px 120px 0 0;
+}
+
+.container-pagination a {
+  color: black;
+  font-size: .9em;
+  border: none;
 }

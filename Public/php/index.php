@@ -25,10 +25,243 @@
             </div>
             <input type="text" class="form-control" aria-label="Filtro" aria-describedby="basic-addon3">
             <div class="input-group-append ms-2">
-                <button class="btn btn-success" type="button">Ok</button>
+                <button class="btn button-filter" type="button">Ok</button>
             </div>
         </div>
+        <button class="btn button-new-process" type="button">Novo Processo</button>
     </div>
+
+
+    <div class="container-table">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col-1">Codigo</th>
+                    <th scope="col-2">Nome</th>
+                    <th scope="col-1">Pessoa</th>
+                    <th scope="col-2">Unidade</th>
+                    <th scope="col-1">Status</th>
+                    <th scope="col-2">Data Criação</th>
+                    <th scope="col-2">Data Modificação</th>
+                    <th scope="col-1">Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>106</th>
+                    <td>Certificados em lote</td>
+                    <td>Victor</td>
+                    <td>Unidade de Blumenal</td>
+                    <td>CANCELADO</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-search me-3" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <td>106</th>
+                    <td>Certificados em lote</td>
+                    <td>Victor</td>
+                    <td>Unidade de Blumenal</td>
+                    <td>CANCELADO</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-search me-3" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <td>106</th>
+                    <td>Certificados em lote</td>
+                    <td>Victor</td>
+                    <td>Unidade de Blumenal</td>
+                    <td>CANCELADO</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-search me-3" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <td>106</th>
+                    <td>Certificados em lote</td>
+                    <td>Victor</td>
+                    <td>Unidade de Blumenal</td>
+                    <td>CANCELADO</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-search me-3" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <td>106</th>
+                    <td>Certificados em lote</td>
+                    <td>Victor</td>
+                    <td>Unidade de Blumenal</td>
+                    <td>CANCELADO</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-search me-3" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <td>106</th>
+                    <td>Certificados em lote</td>
+                    <td>Victor</td>
+                    <td>Unidade de Blumenal</td>
+                    <td>CANCELADO</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-search me-3" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <td>106</th>
+                    <td>Certificados em lote</td>
+                    <td>Victor</td>
+                    <td>Unidade de Blumenal</td>
+                    <td>CANCELADO</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-search me-3" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <td>106</th>
+                    <td>Certificados em lote</td>
+                    <td>Victor</td>
+                    <td>Unidade de Blumenal</td>
+                    <td>CANCELADO</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-search me-3" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <td>106</th>
+                    <td>Certificados em lote</td>
+                    <td>Victor</td>
+                    <td>Unidade de Blumenal</td>
+                    <td>CANCELADO</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-search me-3" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <td>106</th>
+                    <td>Certificados em lote</td>
+                    <td>Victor</td>
+                    <td>Unidade de Blumenal</td>
+                    <td>CANCELADO</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>23-01-23 22:03:26</td>
+                    <td>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-search me-3" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-x-circle-fill" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z"/>
+                        </svg>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="col-1">Codigo</th>
+                    <th scope="col-2">Nome</th>
+                    <th scope="col-1">Pessoa</th>
+                    <th scope="col-2">Unidade</th>
+                    <th scope="col-1">Status</th>
+                    <th scope="col-2">Data Criação</th>
+                    <th scope="col-2">Data Modificação</th>
+                    <th scope="col-1">Opções</th>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="container-pagination">
+            <nav aria-label="...">
+                <ul class="pagination">
+                <li class="page-item">
+                        <a class="page-link" href="#">Primeira</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Anterior</a>
+                    </li>
+                    <li class="page-item active">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">4</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Próxima</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Última</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
 
 
     <!-- script -->
