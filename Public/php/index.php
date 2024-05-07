@@ -19,15 +19,15 @@
     </div>
 
     <div class="container-filter">
-        <div class="input-group mb-3">
+        <form method="post" action="autentication.php" class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text">Filtro:</span>
             </div>
-            <input type="text" class="form-control" aria-label="Filtro" aria-describedby="basic-addon3">
+            <input type="text" class="form-control" aria-label="Filtro" aria-describedby="basic-addon3" name="filtro">
             <div class="input-group-append ms-2">
-                <button class="btn button-filter" type="button">Ok</button>
+                <button class="btn button-filter" type="submit">Ok</button>
             </div>
-        </div>
+        </form>
         <a href="novoProcesso.php" class="btn button-new-process">Novo Processo</a>
     </div>
 

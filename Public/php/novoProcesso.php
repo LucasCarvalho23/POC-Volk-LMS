@@ -20,7 +20,7 @@
     </div>
 
     <div class="container-new-register">
-        <form action="#" method="post">
+        <form action="./autentication.php" method="post">
 
             <div class="row border-topbottom">
                 <div class="col-1">
@@ -28,7 +28,7 @@
                     <span>NOME</span>
                 </div>
                 <div class="col-5">
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" name="nome" required>
                 </div>
             </div>
 
@@ -38,7 +38,7 @@
                     <span>PESSOAS</span>
                 </div>
                 <div class="col-5">
-                    <select name="pessoas" class="form-control">
+                    <select name="pessoas" class="form-control" required>
                         <option value="">Selecione uma pessoa</option>
                         <option value="1">Victor</option>
                         <option value="2">Gabriel</option>
@@ -54,7 +54,7 @@
                     <span>UNIDADES</span>
                 </div>
                 <div class="col-5">
-                    <select name="pessoas" class="form-control">
+                    <select name="unidades" class="form-control" required>
                         <option value="">Selecione uma unidade</option>
                         <option value="1">Unidade Blumenal</option>
                         <option value="2">Unidade Rio de Janeiro</option>
@@ -70,7 +70,7 @@
                     <span>STATUS</span>
                 </div>
                 <div class="col-5">
-                    <select name="pessoas" class="form-control">
+                    <select name="status" class="form-control" required>
                         <option value="">Selecione o status</option>
                         <option value="1">PROCESSADO</option>
                         <option value="2">CANCELADO</option>
@@ -79,7 +79,7 @@
             </div>
 
             <div class="container-button-register border-topbottom">
-                <button class="btn button-create">Gravar</button>
+                <button class="btn button-create" type="submit">Gravar</button>
                 <button class="btn button-clear">Novo</button>
             </div>
 
