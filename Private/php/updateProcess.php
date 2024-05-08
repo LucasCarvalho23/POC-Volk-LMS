@@ -51,12 +51,20 @@
             try{
 
                 $filter = $_POST['filter'];
-                $query = 'select * from tb_processos where nome = :filter or unidade = :filter or status = :filter or pessoa = :filter LIMIT 10';
+                $query = 'select * from tb_processos where nome = :filter or unidade = :filter or status = :filter or pessoa = :filter limit 10';
+                $queryCount = 'SELECT COUNT(*) FROM tb_processos WHERE nome = :filter OR unidade = :filter OR status = :filter OR pessoa = :filter';
+
                 $stmt = $this->conection->prepare($query);
                 $stmt->bindValue(':filter', $filter);
                 $stmt->execute();
-                return $stmt->fetchAll(PDO::FETCH_ASSOC);
+                $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+                $stmtCount = $this->conection->prepare($queryCount);
+                $stmtCount->bindValue(':filter', $filter);
+                $stmtCount->execute();
+                $totalRecords = $stmtCount->fetchAll(PDO::FETCH_ASSOC);
+
+                return array('results' => $results, 'totalRecords' => $totalRecords);
 
             } catch (Exception $e) {
                 $_SESSION['error'] = 'Os dados não foram inseridos. Favor tentar novamente';
@@ -64,6 +72,8 @@
             }
 
         }
+
+
 
         public function update() {
 

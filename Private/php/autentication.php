@@ -39,9 +39,8 @@
 
         $updateProcess = new UpdateProcess($conection, $register);
         $results = $updateProcess->read();
-        header("Location: ./index.php?results=" . urlencode(serialize($results)));
 
-        //limitado para postar apenas 10
+        header("Location: ./index.php?results=" . urlencode(serialize($results)));
 
     } else if ($action =="updateFinal") {
 

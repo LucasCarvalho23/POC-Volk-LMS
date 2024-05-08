@@ -4,7 +4,16 @@
 
     if (isset($_GET['results'])) {
         $results = unserialize(urldecode($_GET['results']));
+        $totalRecords = $results['totalRecords'][0]['COUNT(*)'];
     }
+
+    if (!isset($_GET['results'])) {
+        $totalRecords = 1;
+    }
+
+    $totalPages = ceil($totalRecords/10);
+
+
 
 ?>
 
@@ -73,8 +82,8 @@
             <tbody>
 
                 <?php
-                    if (!empty($results)) {
-                        foreach ($results as $row) {
+                    if (!empty($results['results'])) {
+                        foreach ($results['results'] as $row) {
                             echo "<tr>";
                             echo "<td>" . $row['codigo'] . "</td>";
                             echo "<td>" . $row['nome'] . "</td>";
@@ -120,18 +129,13 @@
                     <li class="page-item">
                         <a class="page-link" href="#">Anterior</a>
                     </li>
-                    <li class="page-item active">
-                        <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">4</a>
-                    </li>
+
+                    <?php for ($count = 1; $count <= $totalPages; $count++) { ?>
+                        <li class="page-item">
+                            <a class="page-link" href="#"><?php echo $count; ?></a>
+                        </li>
+                    <?php } ?>
+
                     <li class="page-item">
                         <a class="page-link" href="#">Próxima</a>
                     </li>
