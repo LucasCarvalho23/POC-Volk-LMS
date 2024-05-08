@@ -1,7 +1,5 @@
 <?php 
 
-    session_start();
-
     class UpdateProcess {
 
         private $conection;
@@ -46,16 +44,17 @@
         }
 
 
-        public function read() {
+        public function read($offset, $filter) {
 
             try{
 
-                $filter = $_POST['filter'];
-                $query = 'select * from tb_processos where nome = :filter or unidade = :filter or status = :filter or pessoa = :filter limit 10';
+                $filter = isset($_POST['filter']) ? $_POST['filter'] : '';
+                $query = 'SELECT * FROM tb_processos WHERE nome = :filter OR unidade = :filter OR status = :filter OR pessoa = :filter LIMIT 10 OFFSET :offset';
                 $queryCount = 'SELECT COUNT(*) FROM tb_processos WHERE nome = :filter OR unidade = :filter OR status = :filter OR pessoa = :filter';
 
                 $stmt = $this->conection->prepare($query);
                 $stmt->bindValue(':filter', $filter);
+                $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
                 $stmt->execute();
                 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

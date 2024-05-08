@@ -40,9 +40,20 @@
         $register = new Register();
 
         $updateProcess = new UpdateProcess($conection, $register);
-        $results = $updateProcess->read();
 
-        header("Location: ./index.php?results=" . urlencode(serialize($results)));
+        $filter = isset($_POST['filter']) ? $_POST['filter'] : '';
+
+        if (!empty($_GET['page'])) {
+            $page = $_GET['page'];
+        } else {
+            $page = 1;
+        }
+        $offset = ($page - 1) * 10;
+
+        $results = $updateProcess->read($offset, $filter);
+
+        header("Location: ./index.php?page={$page}&results=" . urlencode(serialize($results)));
+
 
     } else if ($action =="updateFinal") {
 

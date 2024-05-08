@@ -1,19 +1,30 @@
 <?php 
 
-    session_start();
+session_start();
 
-    if (isset($_GET['results'])) {
-        $results = unserialize(urldecode($_GET['results']));
-        $totalRecords = $results['totalRecords'][0]['COUNT(*)'];
-    }
+require '../../Private/php/conection.php';
+require '../../Private/php/register.php';
+require '../../Private/php/updateProcess.php';
 
-    if (!isset($_GET['results'])) {
-        $totalRecords = 1;
-    }
+$conection = new Conection();
+$register = new Register();
+$updateProcess = new UpdateProcess($conection, $register);
 
-    $totalPages = ceil($totalRecords/10);
+$page = isset($_GET['page']) ? $_GET['page'] : 1;
+$offset = ($page - 1) * 10;
 
+if (isset($_GET['results'])) {
+    $results = unserialize(urldecode($_GET['results']));
+    $page = isset($_GET['page']) ? $_GET['page'] : 1; 
+} else {
+    $page = isset($_GET['page']) ? $_GET['page'] : 1; 
+    $results = $updateProcess->read($offset, isset($_POST['filter']) ? $_POST['filter'] : '');
+}
 
+$totalRecords = $results['totalRecords'][0]['COUNT(*)'];
+$totalPages = ceil($totalRecords/10);
+
+$currentURL = $_SERVER['PHP_SELF'];
 
 ?>
 
@@ -121,16 +132,17 @@
         </table>
 
         <div class="container-pagination">
-            <nav aria-label="...">
-                <ul class="pagination">
-                    <?php for ($count = 1; $count <= $totalPages; $count++) { ?>
-                        <li class="page-item">
-                            <a class="page-link" href="autentication.php?action=page&page=<?php echo $count; ?>"><?php echo $count; ?></a>
-                        </li>
-                    <?php } ?>
-                </ul>
-            </nav>
-        </div>
+    <nav aria-label="...">
+        <ul class="pagination">
+            <?php for ($count = 1; $count <= $totalPages; $count++) { ?>
+                <li class="page-item <?php echo ($page == $count) ? 'active' : ''; ?>">
+                    <a class="page-link" href="<?php echo $currentURL . '?page=' . $count . '&results=' . urlencode(serialize($results)); ?>"><?php echo $count; ?></a>
+                </li>
+            <?php } ?>
+        </ul>
+    </nav>
+</div>
+
     </div>
 
 
