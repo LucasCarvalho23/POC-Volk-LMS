@@ -48,27 +48,14 @@
 
         public function read() {
 
-            try {
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    $filter = $_POST['filter'];
-                } else {
-                    $filter = isset($_GET['filter']) ? $_GET['filter'] : '';
-                }
-                $query = 'SELECT COUNT(*) AS total FROM tb_processos WHERE nome LIKE :filter OR unidade LIKE :filter OR status LIKE :filter OR pessoa LIKE :filter';
+            try{
+
+                $filter = $_POST['filter'];
+                $query = 'select * from tb_processos where nome = :filter or unidade = :filter or status = :filter or pessoa = :filter LIMIT 10';
                 $stmt = $this->conection->prepare($query);
-                $stmt->bindValue(':filter', "%$filter%");
+                $stmt->bindValue(':filter', $filter);
                 $stmt->execute();
-                $totalResults = $stmt->fetch(PDO::FETCH_ASSOC)['total'];
-                $totalPages = ceil($totalResults / 10);
-                $query = 'SELECT * FROM tb_processos WHERE nome LIKE :filter OR unidade LIKE :filter OR status LIKE :filter OR pessoa LIKE :filter LIMIT 10 OFFSET :offset';
-                $page = isset($_GET['page']) ? $_GET['page'] : 1;
-                $offset = ($page - 1) * 10;
-                $stmt = $this->conection->prepare($query);
-                $stmt->bindValue(':filter', "%$filter%");
-                $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
-                $stmt->execute();
-                $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                return ['results' => $results, 'totalPages' => $totalPages];
+                return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 
             } catch (Exception $e) {

@@ -4,11 +4,7 @@
 
     if (isset($_GET['results'])) {
         $results = unserialize(urldecode($_GET['results']));
-    } else {
-        $results = ['results' => [], 'totalPages' => 1];
     }
-
-    $page = isset($_GET['page']) ? $_GET['page'] : 1;
 
 ?>
 
@@ -77,9 +73,8 @@
             <tbody>
 
                 <?php
-                    $totalPages = 1;
-                    if (!empty($results) && isset($results['results'])) {
-                        foreach ($results['results'] as $row) {
+                    if (!empty($results)) {
+                        foreach ($results as $row) {
                             echo "<tr>";
                             echo "<td>" . $row['codigo'] . "</td>";
                             echo "<td>" . $row['nome'] . "</td>";
@@ -99,12 +94,7 @@
                             </td>";
                             echo "</tr>";
                         }
-
-                        $totalPages = $results['totalPages'];
-
-                    } else {
-                        $totalPages = 1;
-                    }
+                    } 
                 ?>
 
                 <tr>
@@ -130,15 +120,18 @@
                     <li class="page-item">
                         <a class="page-link" href="#">Anterior</a>
                     </li>
-                    <nav aria-label="...">
-                        <ul class="pagination">
-                            <?php
-                                for ($count = 1; $count <= $totalPages; $count++) { 
-                                    echo "<li class='page-item " . ($count == $page ? 'active' : '') . "'><a class='page-link' href='./index.php?page={$count}'>{$count}</a></li>";
-                                }
-                            ?>
-                        </ul>
-                    </nav>
+                    <li class="page-item active">
+                        <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">4</a>
+                    </li>
                     <li class="page-item">
                         <a class="page-link" href="#">Próxima</a>
                     </li>
