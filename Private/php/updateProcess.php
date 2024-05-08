@@ -46,7 +46,7 @@
 
         public function read($offset, $filter) {
 
-            try{
+            try {
 
                 $filter = isset($_POST['filter']) ? $_POST['filter'] : '';
                 $query = 'SELECT * FROM tb_processos WHERE nome = :filter OR unidade = :filter OR status = :filter OR pessoa = :filter LIMIT 10 OFFSET :offset';

@@ -42,6 +42,7 @@
         $updateProcess = new UpdateProcess($conection, $register);
 
         $filter = isset($_POST['filter']) ? $_POST['filter'] : '';
+        $page = isset($_GET['page']) ? $_GET['page'] : 1;
 
         if (!empty($_GET['page'])) {
             $page = $_GET['page'];
