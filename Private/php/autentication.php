@@ -43,12 +43,23 @@
 
         //limitado para postar apenas 10
 
-    } if ($action =="updateFinal") {
+    } else if ($action =="updateFinal") {
 
         $conection = new Conection();
         $register = new Register();
         $updateProcess = new UpdateProcess($conection, $register);
         $updateProcess->updateFinal();
+
+    } else if ($action == "deleteProcess") {
+
+        if (isset($_GET['codigo'])) {
+            $codigo = $_GET['codigo'];
+        }
+        $conection = new Conection();
+        $register = new Register();
+        $updateProcess = new UpdateProcess($conection, $register);
+        $_SESSION['codigo'] = $codigo;
+        $updateProcess->delete();
 
     }
     
