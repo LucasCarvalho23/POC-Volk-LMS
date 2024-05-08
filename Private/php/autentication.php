@@ -7,6 +7,8 @@
 
     $action = isset($_GET['action']) ? $_GET['action'] : $action;
 
+    echo $_GET['page'];
+
     if ($action =="updateProcess") {
 
         $conection = new Conection();

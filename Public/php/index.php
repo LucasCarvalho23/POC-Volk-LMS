@@ -123,25 +123,11 @@
         <div class="container-pagination">
             <nav aria-label="...">
                 <ul class="pagination">
-                <li class="page-item">
-                        <a class="page-link" href="#">Primeira</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">Anterior</a>
-                    </li>
-
                     <?php for ($count = 1; $count <= $totalPages; $count++) { ?>
                         <li class="page-item">
-                            <a class="page-link" href="#"><?php echo $count; ?></a>
+                            <a class="page-link" href="autentication.php?action=page&page=<?php echo $count; ?>"><?php echo $count; ?></a>
                         </li>
                     <?php } ?>
-
-                    <li class="page-item">
-                        <a class="page-link" href="#">Próxima</a>
-                    </li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">Última</a>
-                    </li>
                 </ul>
             </nav>
         </div>
