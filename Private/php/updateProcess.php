@@ -1,5 +1,7 @@
 <?php 
 
+    session_start();
+
     class UpdateProcess {
 
         private $conection;
@@ -44,26 +46,17 @@
         }
 
 
-        public function read($offset, $filter) {
+        public function read() {
 
-            try {
+            try{
 
-                $filter = isset($_POST['filter']) ? $_POST['filter'] : '';
-                $query = 'SELECT * FROM tb_processos WHERE nome = :filter OR unidade = :filter OR status = :filter OR pessoa = :filter LIMIT 10 OFFSET :offset';
-                $queryCount = 'SELECT COUNT(*) FROM tb_processos WHERE nome = :filter OR unidade = :filter OR status = :filter OR pessoa = :filter';
-
+                $filter = $_POST['filter'];
+                $query = 'select * from tb_processos where nome = :filter or unidade = :filter or status = :filter or pessoa = :filter LIMIT 10';
                 $stmt = $this->conection->prepare($query);
                 $stmt->bindValue(':filter', $filter);
-                $stmt->bindValue(':offset', $offset, PDO::PARAM_INT);
                 $stmt->execute();
-                $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                return $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                $stmtCount = $this->conection->prepare($queryCount);
-                $stmtCount->bindValue(':filter', $filter);
-                $stmtCount->execute();
-                $totalRecords = $stmtCount->fetchAll(PDO::FETCH_ASSOC);
-
-                return array('results' => $results, 'totalRecords' => $totalRecords);
 
             } catch (Exception $e) {
                 $_SESSION['error'] = 'Os dados não foram inseridos. Favor tentar novamente';
@@ -71,8 +64,6 @@
             }
 
         }
-
-
 
         public function update() {
 
